@@ -25,7 +25,7 @@ function qhatch(X, Y, angle, step, color)
 	sin_ = sin(angle * pi / 180);
 	M = [sin_, cos_; -cos_, sin_];
 	[X_, Y_] = qrotate(M, X, Y);
-	yrange_ = quantile(Y, [0, 1]);
+	yrange_ = quantile(Y_, [0, 1]);
 	plot(X, Y, '-', 'Color', color);
 	ishold_ = ishold;
 	hold on
